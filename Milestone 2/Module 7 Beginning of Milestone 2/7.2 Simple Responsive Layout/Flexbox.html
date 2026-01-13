@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        #box-container {
+            border: 2px solid black;
+            height: 100px;
+            width: auto;
+            display: flex;
+        }
+        .q1 {
+            justify-content: none;
+            align-items: baseline;
+        }
+        .q2 {
+            justify-content: flex-start;
+        }
+        .q3 {
+            justify-content: flex-end;
+        }
+        .q4 {
+            justify-content: center;
+        }
+        .q5 {
+            justify-content: space-between;
+        }
+        .q6 {
+            justify-content: space-evenly;
+        }
+        .q7 {
+            justify-content: space-around;
+        }
+        .q8 {
+            align-items: flex-start;
+        }
+        .q9 {
+            align-items:flex-end;
+        }
+        .q10{
+            align-items: center;
+        }
+
+        .box {
+            border: 2px inset limegreen;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Layout</h1>
+    <div class="container">
+        <p>1. justify-content: none</p>
+        <div id="box-container" class="q1">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>2. justify-content: flex-start (default)</p>
+        <div id="box-container" class="q2">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>3. justify-content: flex-end</p>
+        <div id="box-container" class="q3">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>4. justify-content: center</p>
+        <div id="box-container" class="q4">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>5. justify-content: space-between</p>
+        <div id="box-container" class="q5">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>6. justify-content: space-evenly</p>
+        <div id="box-container" class="q6">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>7. justify-content: space-around</p>
+        <div id="box-container" class="q7">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>8. align-items: flex-start</p>
+        <div id="box-container" class="q8">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>9. align-items: flex-end</p>
+        <div id="box-container" class="q9">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>10. justify-content: </p>
+        <div id="box-container" class="q10">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q11">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q12">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q13">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q14">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q15">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q16">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q17">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q18">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q19">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="container">
+        <p>justify-content: </p>
+        <div id="box-container" class="q20">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+</body>
+</html>
