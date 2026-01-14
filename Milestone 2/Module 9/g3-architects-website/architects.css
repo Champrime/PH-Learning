@@ -33,14 +33,17 @@
     padding: ;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     border: 1px solid #ccc;
 }
 
 .nav-links a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-links li{
     list-style: none;
-    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
