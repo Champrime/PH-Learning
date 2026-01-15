@@ -10,40 +10,87 @@
   font-style: normal;
 }
 
+:root {
+    --dark1: #131313;
+    --dark2: #424242;
+    --dark3: #727272;
+    --dark4: #A1A1A1;
+    --dark5: #D0D0D0;
+    --dark6: #E7E7E7;
+    --dark7: #F3F3F3;
+    --white: #FFFFFF;
+    --header-bg: rgba(255, 144, 14, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: var(--white);
+    color-scheme: light;
+}
+
 /* Shared Styles */
-.flexbox {
-  display: flex;
+
+.navbar, .nav-link, .nav-item, .g3 {
+    display: flex;
+    align-items: center;
+}
+.navbar, .nav-links {
+  justify-content: space-between;
+
 }
 
 .text-grey{
     color: #424242;
 }
 
+/* Navbar related Styles */
+.navbar{
+    padding: 50px 228px 0px 240px;
+}
+
+/* What possible problem could show up if I'd use margin instead of padding in the .navbar class? Explain your answer. */
+
 
 /* Header Styles */
-.brand{
-    border: 1px solid #ccc;
+header{
+    background-color: var(--header-bg);
 }
 
-
-
-/* Navbar related Styles */
-.nav-links{
-    width: 100vw;
-    padding: ;
-    display: flex;
-    justify-content: flex-end;
+.g3{
+    color: var(--dark1);
+    font-size: 45px;
+    /* border: 1px solid #ccc; */
     align-items: center;
-    border: 1px solid #ccc;
 }
 
-.nav-links a{
+
+
+/* Navlink related Styles */
+
+
+.nav-links{
+    width: 477px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-item{
+    justify-content: center;
+    list-style: none;
+    width: fit-content;
+    /* padding: 5px; */
+}
+
+.nav-link{
+    color: var(--dark2);
     text-decoration: none;
     cursor: pointer;
-}
-
-.nav-links li{
-    list-style: none;
-    border: 1px solid #ccc;
-    padding: 5px;
+    white-space: nowrap;
 }
