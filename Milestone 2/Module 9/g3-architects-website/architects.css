@@ -34,16 +34,34 @@ body {
 }
 
 h1{
-    font-size: 64px; 
+    font-size: 4rem;
+    color: var(--dark1);
 }
-h3 {
-    font-size: 45px;
+h2 {
+    font-size: 2.8125rem;
+    color: var(--dark1);
+    margin: 1.5rem 0.1875rem;
 }
-
+h4 {
+    font-size: 1.25rem;
+    color: var(--dark1);
+    margin: 0.625rem 0.1875rem;
+}
 p {
-    font-size: 18px;
+    font-size: 16px;
+    color: var(--dark3);
 }
 
+button{
+    background-color: var(--btn-bg);
+    color: var(--white);
+    font-size: 1.25em;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5em;
+    padding: 1.25em 1.5625em;
+    cursor: pointer;
+}
 /* Nav Shared Styles */
 
 .navbar, .nav-link, .nav-item, .g3 {
@@ -52,12 +70,11 @@ p {
 }
 .navbar, .nav-links {
   justify-content: space-between;
-
 }
 
 /* Navbar related Styles */
 .navbar{
-    padding: 50px 228px 0px 240px;
+    padding: 3.125rem 14.25rem 0px 15rem;
 }
 
 /* What possible problem could show up if I'd use margin instead of padding in the .navbar class? Explain your answer. */
@@ -66,7 +83,7 @@ p {
 /* Header Styles */
 .header{
     background-color: var(--header-bg);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .g3{
@@ -77,11 +94,11 @@ p {
 
 
 .nav-links{
-    width: 477px;
+    width: 29.8125rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 34px;
+    gap: 2.125rem;
 }
 
 .nav-item{
@@ -104,8 +121,8 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 102px 240px 45px;
-    gap: 24px;
+    padding: 6.375rem 15rem 2.8125rem;
+    gap: 1.5rem;
 }
 
 .banner-header{
@@ -114,25 +131,24 @@ p {
 
 .banner-sub{
     color: var(--dark3);
-    width: 868px;
-    line-height: 26px;
+    width: 54.25rem;
+    line-height: 1.625rem;
 }
 
-.banner-btn, .quick-notes-btn{
+/* .banner-btn, .quick-notes-btn{
     background-color: var(--btn-bg);
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
-    padding: 20px 25px;
+    border-radius: 0.5em;
+    padding: 1.25em 1.5625em;
     cursor: pointer;
-}
+} */
 
 .banner-photo{
-    height: 700px;
-    width: 1440px;
-    border: 1px solid #ccc;
+    height: auto;
+    width: auto;
 }
 
 /* Quick-list section */
@@ -141,21 +157,19 @@ p {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 73px;
-    padding: 85px 301px 130px;
+    gap: 4.5625rem;
+    padding: 5.3125rem 18.8125rem 8.125rem;
     margin: 0px auto;
-    border: 1px solid #ccc;
 }
 
 .quick-list-notes{
     width: auto;
-    border: 1px solid #ccc;
 }
 
 .team-photos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 1.5rem;
 }
 .qnh-p1{
     color: var(--dark3);
@@ -177,8 +191,168 @@ p {
     white-space: nowrap;
 }
 .quick-notes-paragraph{
-    padding: 24px 0px 32px;
-    font-size: 16px;
+    padding-bottom: 2rem;
+}
+
+/* feature cards section */
+
+.feature{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6.375rem 15rem 2.8125rem;
+    gap: 3.5rem;
+}
+/* .feature-paragraph, .card-paragraph{
     color: var(--dark3);
-    border: 1px solid #ccc;
+} */
+
+.feature-header-container{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.feature-header{
+    width: 29.25rem;
+}
+.feature-header-line{
+    align-self: stretch;
+    width: 0.3125rem;
+    height: auto;
+    background-color: var(--btn-bg);
+    margin: 1.5rem 0 1.5rem;
+}
+
+.feature-cards{
+    margin-top: 2rem;
+    width: 36.625rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+}
+.feature-card{
+    margin-top: 1.25rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0rem 2rem rgba(209, 209, 209, 0.25);
+}
+
+/* Experience Badge Styles */
+.experience-badge {
+    margin-top: -4.8125rem;
+    margin-left: -5.75rem;
+}
+
+.experience-years {
+    font-size: 2.8125rem;
+    font-weight: 700;
+}
+
+.experience-text {
+    font-weight: 500;
+}
+
+/* facts cards */
+.some-facts{
+    padding: 6.375rem 15rem 2.8125rem;
+}
+
+.facts-paragraph{
+    width: 33.875em;
+}
+.facts-cards-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+.facts-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.87em 2.25em 4em;
+    height: 15.2rem;
+    width: 15.2rem;
+    border: 0.0625rem solid var(--btn-bg);
+    border-radius: 0.8rem;
+    box-shadow: 0rem 0rem 2rem rgba(209, 209, 209, 0.25);
+    gap: 1rem;
+    margin: 6.3rem 0 11.3rem;
+}
+
+.facts-card h4{
+    font-size: 2.8125rem;
+    margin: auto;
+}
+
+.facts-card p{
+    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 360.00001px) and (max-width: 768px){
+    .navbar{
+        padding: 2rem 4rem 0rem 4rem;
+    }
+    .banner{
+        padding: 4rem 4rem 2rem 4rem;
+    }
+    .banner-sub{
+        width: auto;
+        padding: 0 2rem;
+    }
+    .quick-list{
+        grid-template-columns: 1fr;
+        padding: 4rem 4rem 4rem 4rem;
+    }
+    .feature{
+        flex-direction: column;
+        padding: 4rem 4rem 2rem 4rem;
+    }
+    .feature-cards{
+        width: auto;
+    }
+    .some-facts{
+        padding: 4rem 4rem 2rem 4rem;
+    }
+    .facts-cards-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* media querys */
+
+@media screen and (max-width: 360px){
+    html{
+        font-size: 62.5%;
+        max-width: 100vw;
+    }
+    .navbar, .nav-link, .nav-item, .g3 {
+        flex-direction: column;
+    }
+    .navbar, .nav-links {
+        justify-content: center;
+        gap: 20px;
+    }
+    img{
+        height: auto;
+        width: 100vw;
+    }
+    .team-photos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-photos img{
+        width: 100%;
+        height: auto;
+    }
+    .quick-list{
+        grid-template-columns: 1fr;
+        margin: 0 1rem;
+        padding: 2rem;
+    }
 }
