@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Shared styles */
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.bg-color {
+  background-color: #1a0b2e;
+}
+.primary-color {
+  color: #ffffff;
+}
+.secondary-color {
+  color: #00ff88;
+}
+/* Main styles */
+/* hero section */
+.hero-section {
+  background-image: url(./assets/hero-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .hero-img-container{
+  background: url(./assets/hero-circle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.hero-btn {
+  border-color: #00ff88;
+  transition: all 1s ease-out;
+}
+.hero-btn,
+.card-title {
+  color: #00ff88;
+  border-color: #00ff88;
+}
+.hero-button {
+  top: 1rem;
+  right: 1.5rem;
+  background-color: #00ff88;
+}
+.hero-btn:hover {
+  background-color: #00ff88;
+  color: #1a0b2e;
+}
+/* About section */
+.horizental-line {
+  color: #ffffff0f;
+}
+/* Why choose section */
+.why-choose-section {
+  background-color: #230e3d;
+}
+.choose-box,
+.host-social-container,
+.features-card {
+  background-color: rgba(53, 17, 101, 0.4);
+}
+/* Footer section */
+
+.footer-section {
+  background-image: url(./assets/footer-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Circle animation */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-section {
+    background-size: 100% 100%;
+  }
+}
