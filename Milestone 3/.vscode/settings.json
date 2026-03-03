@@ -1,5 +1,15 @@
 {
   "github.copilot.enable": {
-    "*": false
-  }
+    "*": true
+  },
+  "editor.inlineSuggest.enabled": true, /*last false*/
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.wordBasedSuggestions": "allDocuments",
+  "editor.suggest.showWords": true,
+  "editor.parameterHints.enabled": true /*last false*/
 }

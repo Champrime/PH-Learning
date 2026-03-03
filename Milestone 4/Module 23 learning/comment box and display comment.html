@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box and Display Comment</title>
+    <link rel="stylesheet" href="../src/twOutput.css">
+    <style>
+        #post-comment-button{
+            background: #000;
+            margin: 1rem 1.25rem;
+            padding: 1rem 1.25rem;
+            border-radius: 0.25rem;
+            border: hidden;
+            transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        #post-comment-button span{
+            background-image: linear-gradient(180deg, #228b22, #3eb489);
+            background-clip: text;
+            color: transparent;
+        }
+
+        #post-comment-button:hover{
+            color: rgba(206, 255, 201, 0.7);
+            background-image: linear-gradient(180deg, #228b22, #3eb489);
+            box-shadow: 0 0 1.25rem 0 #228489;
+            transform: scale(1.05);
+            span {
+                color: white;
+            }
+        }
+
+        .comment{
+            padding: 1rem;
+            border: 0.25rem solid #1f5e4e;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        /* Target children INSIDE .comments */
+        .comment:nth-child(odd){
+            align-self: flex-start;   /* push to LEFT */
+            background: linear-gradient(-120deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border-radius: 0.5rem 0.5rem 0.5rem 0; /* chat bubble shape */            
+            transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1)
+        }
+
+        .comment:nth-child(odd):hover{
+            border-radius: 1rem 1rem 1rem 0;
+            transform: translateX(0.5em) translateY(-1em);
+        }
+
+        .comment:nth-child(even){
+            align-self: flex-end;
+            background: linear-gradient(120deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border-radius: 0.5rem 0.5rem 0 0.5rem;
+            transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1)
+        }
+
+        .comment:nth-child(even):hover{
+            border-radius: 1rem 1rem 0 1rem;
+            transform: translateX(-0.5em) translateY(-1em);
+        }
+
+        #write-comment-box{
+            padding: 1rem;
+            background: linear-gradient(90deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border: 0.25rem solid #1f5e4e;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>My Awesome Comment Box. Write whatever is in yo mind!!!</h1>
+    <section>
+        <h3>All comments here</h3>
+        <div id="comment-group" class="comments flex-y gap-5 m-3">
+            <p id="comment1" class="comment">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro rem minus sequi voluptas laudantium, exercitationem assumenda ducimus explicabo? Enim itaque quia illum quaerat necessitatibus cumque quos labore quod error, sit quibusdam, quo repudiandae, in aperiam praesentium voluptatibus molestias? Perspiciatis quis asperiores deleniti inventore ratione aliquam eos recusandae at iste!
+            </p>
+            <p id="comment2" class="comment">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde officia praesentium consequatur asperiores magni in reiciendis doloribus voluptates laborum quos, dolor fugiat cupiditate soluta amet laudantium. Voluptate vitae tempore quis earum facilis quidem necessitatibus voluptatem hic cumque voluptatibus, error rem accusamus dolorem inventore pariatur in incidunt quibusdam unde, ducimus magni!
+            </p>
+            <p id="comment3" class="comment">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestias. Consequatur, eveniet? Consequatur accusamus quaerat veritatis quidem saepe, harum repellendus temporibus numquam eveniet unde illo voluptatum eius, quos aspernatur neque libero enim dolores ad eaque tempora. Libero consequuntur id quis! Nulla praesentium earum qui facilis sint modi! Minima, quia aperiam?
+            </p>
+        </div>
+        <div class="flex-center-col-y m-10">
+            <textarea name="post-comment-button" placeholder="Say Alhamdulillah and La Ilaha Illalahu Muhammadur Rasulullah sallaallaahu Alaihi Wa Saallam." id="write-comment-box" class="text-xs" cols="50" rows="4"></textarea>
+            <button id="post-comment-button"><span>Post Comment</span></button>
+        </div>
+    </section>
+</body>
+<script>
+    // step--1: set an event handler to the button
+    document.getElementById("post-comment-button").addEventListener("click", () =>{
+        // step--2: get the text written in the comment text area
+        const writeComment = document.getElementById("write-comment-box").value;
+        // step--3: get the parent node where the comment will be appended as a child element
+        const comments = document.getElementById("comment-group");
+        // step--4: create a commment paragraph and set the innerText
+        const newComment = document.createElement('p'); //p
+        newComment.classList.add("comment"); //.comment
+        newComment.innerText = writeComment; //{whatever written in the comment box}
+            // p.comment{whatever written in the comment box}
+        // step--5: append the comment as a child element to the parent node
+        // newComment.appendChild(writeComment);
+        comments.appendChild(newComment);
+    })
+</script>
+</html>

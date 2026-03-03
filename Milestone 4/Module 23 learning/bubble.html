@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <link rel="stylesheet" href="../src/twOutput.css">
+    <style>
+        section {
+            padding: 1rem;
+            margin: 0.5rem;
+            background: linear-gradient(270deg, rgb(118, 19, 240), rgb(8, 183, 231), rgb(118, 19, 240));
+            border: 0.3rem solid #065193;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            background: linear-gradient(90deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border: 0.125rem solid #1f5e4e;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        li {
+            padding: 0.25rem;
+            margin: 0.5rem;
+            background: linear-gradient(180deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border: 0.0625rem solid #1f5e4e;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        body {
+            padding: 1.25rem;
+            margin: 0.5rem;
+            background: linear-gradient(270deg, rgb(118, 19, 240), rgb(148, 2, 205), rgb(118, 19, 240));
+            border: 0.5rem solid #0a0a0a;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        h1 {
+            padding: 0.25rem;
+            margin: 0.5rem;
+            background: linear-gradient(270deg, rgb(118, 19, 240), rgb(8, 183, 231), rgb(118, 19, 240));
+            border: 0.3rem solid #065193;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore Event Bubble</h1>
+    <!-- h3{List of things}+ul>li#item-$*6>lorem2 -->
+    <h3>List of things</h3>
+    <ul id="items-list">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Aliquid, accusantium?</li>
+        <li id="item-3">Quisquam, non.</li>
+        <li id="item-4">Aliquam, quia.</li>
+        <li id="item-5">Placeat, delectus!</li>
+        <li id="item-6">Aliquid, deserunt?</li>
+    </ul>
+</body>
+<script>
+    // List item 5 click handler
+    setTimeout(() => {document.getElementById("item-5").addEventListener("click", () => {
+        console.log(`clicked on item-5`);
+        // event.stopImmediatePropagation();
+    })}, 2000);
+
+    document.getElementById("item-5").addEventListener("click", () => {
+        console.log(`clicked on item-5`);
+        // event.stopPropagation();
+    })
+
+    document.getElementById("item-5").addEventListener("click", (Bubble) => {
+        console.log(`clicked on ${document.getElementById("item-5").innerText}`);
+        // Bubble.stopImmediatePropagation(); //won't bubble event beyond this function.
+        
+    })
+
+    document.getElementById("item-5").addEventListener("click", () => {
+        console.log(`item 5/6`);
+        // event.stopPropagation();
+    })
+
+    //ul click handler
+    document.getElementById("items-list").addEventListener("click", () => {
+        console.log(`clicked on ul`);
+    })
+
+    //body click handler
+    document.querySelector("body").addEventListener("click", ()=>{console.log(`clicked over the body`)})
+</script>
+</html>

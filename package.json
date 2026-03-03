@@ -3,6 +3,8 @@
     "start": "servor --reload"
   },
   "dependencies": {
-    "servor": "^4.0.2"
+    "@tailwindcss/cli": "^4.1.18",
+    "servor": "^4.0.2",
+    "tailwindcss": "^4.1.18"
   }
 }

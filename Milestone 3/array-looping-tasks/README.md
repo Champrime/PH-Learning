@@ -78,7 +78,7 @@ Given an array of student objects, print each student’s name and marks.
 ]
 ```
 
-# Expected ooutput: 
+Expected output: 
 ```
 John scored 85
 Alice scored 90

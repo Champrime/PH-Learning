@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+    <style>
+        section {
+            padding: 1rem;
+            margin: 0.5rem;
+            background: linear-gradient(270deg, rgb(118, 19, 240), rgb(8, 183, 231), rgb(118, 19, 240));
+            border: 0.3rem solid #065193;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        
+        }
+
+        ol {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            background: linear-gradient(90deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border: 0.125rem solid #1f5e4e;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        li {
+            padding: 0.25rem;
+            margin: 0.5rem;
+            background: linear-gradient(180deg, rgb(161, 228, 46), rgb(83, 205, 2), rgb(161, 228, 46));
+            border: 0.0625rem solid #1f5e4e;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        body {
+            padding: 1.25rem;
+            margin: 0.5rem;
+            background: linear-gradient(270deg, rgb(118, 19, 240), rgb(148, 2, 205), rgb(118, 19, 240));
+            border: 0.5rem solid #0a0a0a;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+
+        h1 {
+            padding: 0.25rem;
+            margin: 0.5rem;
+            background: linear-gradient(270deg, rgb(118, 19, 240), rgb(8, 183, 231), rgb(118, 19, 240));
+            border: 0.3rem solid #065193;
+            border-radius: 0.5rem;
+            max-width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1{Explore the concept of Event Delegation}+ol#item-list>li.item*6{My Awesome Item - $} -->
+    <h1>Explore the concept of Event Delegation</h1>
+    <ol id="item-list">
+        <li class="item">My Awesome Item - 1</li>
+        <li class="item">My Awesome Item - 2</li>
+        <li class="item">My Awesome Item - 3</li>
+        <li class="item">My Awesome Item - 4</li>
+        <li class="item">My Awesome Item - 5</li>
+        <li class="item">My Awesome Item - 6</li>
+    </ol>
+    <button id="btn-add-item">Add New Item</button>
+</body>
+<script>
+    // console.log(`${document.getElementsByClassName("item")}`);
+
+    // for(let item of document.getElementsByClassName("item-list")){
+    //     item.addEventListener("click", (event)=>{
+    //         console.log(`You clicked on ${item.innerText}`);
+    //         console.log(`${item.innerText} belongs to ${event.target.parentNode}, the parentNode. I want the parent remove ${item.innerHTML}`);
+    //         event.target.parentNode.removeChild(event.target);
+    //     // I clicked on a item, called it's parent to remove it from it's inventory.
+    //     // Much like going back to a parent folder to delete the child folder,
+    //     // Which html understands as "USER evented A target AND CALLED FOR IT'S parentNode TO remove_THE_Child THAT'S event.targetED".
+    //     })
+    // }
+
+        let li = [], liNum = [], hNum = 0, i = 0;
+        for (li of document.getElementsByTagName("li")){
+            li = li.innerText.split(" ");
+            for (num of li){
+                if(!isNaN(num)){ liNum.push(Number(num)); };
+            }
+        };
+
+        for(; i < liNum.length; i++){
+            if(liNum[i+1]-liNum[i] >= 2){
+                hNum = liNum[i]+1;
+                break;
+            } else { hNum = liNum[i]+1 }
+        }
+
+    document.getElementById("item-list").addEventListener("click", (event)=>{
+        console.log(`You clicked on ${hNum.innerText}`);
+        console.log(`${hNum.innerText} belongs to ${event.target.parentNode}, the parentNode. I want the parent remove ${hNum.innerHTML}`);
+        event.target.parentNode.removeChild(event.target);
+    })
+
+        //Add a new item
+        document.getElementById("btn-add-item").addEventListener("click", () => {
+            let newListItem = document.createElement("li");
+            newListItem.classList.add("item");
+            newListItem.innerText = `My Awesome Item - ${hNum}`;
+            // console.log("newListItem.innerText");
+            document.getElementById("item-list").appendChild(newListItem);
+            //this newly added Items won't be removed because the removal property was processed by for...of loop and assigned the existing items.
+        });
+
+        // Too many problematic codes, on top of which the code is still not well functioning
+</script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github style delete confirmation</title>
+    <style>
+
+        button{
+            background: rgb(87, 248, 0);
+            margin: 1rem 1.25rem;
+            padding: 1rem 1.25rem;
+            border-radius: 0.25rem;
+            border: hidden;
+            transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        button:disabled {
+            opacity: 50%;
+        }
+
+        button:disabled:hover {
+            color: rgba(17, 18, 17, 0.7);
+            background-image: linear-gradient(180deg, #228b22, #3eb489);
+            box-shadow: 0 0 1.25rem 0 #228489;
+            transform: scale(1.05);
+            opacity: 50%;
+            cursor: not-allowed;
+        }
+
+        button span{
+            background-image: linear-gradient(180deg, #228b22, #3eb489);
+            background-clip: text;
+            color: transparent;
+        }
+
+        button:hover{
+            color: rgba(206, 255, 201, 0.7);
+            background-image: linear-gradient(180deg, #228b22, #3eb489);
+            box-shadow: 0 0 1.25rem 0 #228489;
+            transform: scale(1.05);
+            span {
+                color: white;
+            }
+        }
+
+        input{
+            color: #1f5e4e;
+            padding: 1rem;
+            border: 0.25rem solid #1f5e4e;
+            border-radius: 0.5rem;
+        }
+
+        p {
+            display: flex;
+            color: white; /* linear-gradient(-90deg, #228489, rgba(35, 134, 139, 0.067));*/
+            background: linear-gradient(90deg, #228489, rgba(35, 134, 139, 0.067));
+            padding: 1.25rem 1rem;
+            margin: 2rem;
+            border: 0.125rem dashed linear-gradient(-90deg, #228489, rgba(35, 134, 139, 0.067));
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" placeholder="Write DELETE to confirm" id="input-delete">
+    <button id="del-btn" disabled><span>Delete</span></button>
+    <div id="written"></div>
+</body>
+<script>
+    const x = document.getElementById("input-delete"), del_btn = document.getElementById("del-btn");
+    x.addEventListener("keyup", (parameter) => {
+        //Method 1:
+        /* if (parameter.target.value === "DELETE"){
+                del_btn.removeAttribute("disabled");
+             } else {del_btn.setAttribute("disabled", true)};*/
+
+        //Method 2:
+        // del_btn.toggleAttribute("disabled", parameter.target.value !== "DELETE");
+
+        // Method 3:
+        // parameter.target.value === "DELETE" ? del_btn.removeAttribute("disabled") : del_btn.setAttribute("disabled", true);
+        
+        // Lesson learnt:
+        // element.addEventListener("event", function(parameter for .target.value), { once : true } -- if I want user to be able to press the button only once);
+        // element.toggleAttribute("attribute name of the element", boolean statement where toggle will switch on and off);
+        // element.setAttribute("desired attribute name of the element", true);
+
+    })
+
+    del_btn.addEventListener("click", () => {
+        const writtenWhat = document.createElement("p"), written = document.getElementById("written");
+        writtenWhat.innerHTML = `You have consented as: ${document.getElementById("input-delete").value}`;/* parameter.target.value is the same as document.getElementById("input-delete").value; */
+        written.appendChild(writtenWhat);
+    })
+</script>
+</html>
