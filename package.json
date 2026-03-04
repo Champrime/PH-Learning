@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "start": "servor --reload"
+    "start": "servor --browse --reload"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
+    "quokka": "^0.0.7",
     "servor": "^4.0.2",
     "tailwindcss": "^4.1.18"
   }
