@@ -21,14 +21,18 @@ console.log(arr);
 
 //2
 loadPost.addEventListener("click", () => {
-  let url = "https://dummyjson.com/products";
-  fetch(url).then(response => response.json()).then(jsonData => {
-    jsonData.forEach((Data) => { 
-        let x = document.createElement("div");
-        x.innerHTML = `<br><code>${Data}</code><br>`;
-        document.querySelector("body").appendChild(x);
+  let z = document.createElement("div > ol");
+  document.querySelector("body").appendChild(z);
+  for (let i = 0; i < arr.length; i++){
+    let url = arr[i];
+    fetch(url).then(response => response.json()).then(jsonData => {
+      jsonData.forEach((Data) => { 
+          let x = document.createElement("li");
+          x.innerHTML = `li<br><code>${Data}</code><br>`;
+          document.querySelector("ol").appendChild(x);
+      })
     })
-  })
+  }
 });
 
 // 2
