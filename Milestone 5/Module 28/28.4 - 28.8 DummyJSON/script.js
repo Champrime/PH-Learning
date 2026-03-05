@@ -13,27 +13,43 @@ oneClick.addEventListener("click", () => {
 
 let loadPost = document.getElementById("loadPost");
 let arr = []
-for (let i = 0; i <= 100; i++){
-  arr[i] = `https://dummyjson.com/products/${i}`;
-}
 
-console.log(arr);
+for (let i = 1; i <= 45; i++){
+  // setInterval (() => {
+    arr[i-1] = `https://dummyjson.com/products/${i}`;
+    console.log(arr[i-1]);
+  // }, 500);
+}
 
 //2
 loadPost.addEventListener("click", () => {
-  let z = document.createElement("div > ol");
-  document.querySelector("body").appendChild(z);
+  let wrapper = document.createElement("div"), container = document.createElement("ol");
+  wrapper.className = "api-json"; container.className = "json-list";
+  document.querySelector("body").appendChild(wrapper.appendChild(container));
+  
+  displayLoop();
+  });
+
+let displayLoop = () => {
+  wrapper.innerHTML = "";
   for (let i = 0; i < arr.length; i++){
     let url = arr[i];
     fetch(url).then(response => response.json()).then(jsonData => {
-      jsonData.forEach((Data) => { 
+      let arrObj = [];
+      if (typeof jsonData === "object" || typeof jsonData === "string") {arrObj.push(jsonData); console.dir(`${jsonData} is in`)};
+      console.log(arrObj);
+      arrObj.forEach((data) => {
           let x = document.createElement("li");
-          x.innerHTML = `li<br><code>${Data}</code><br>`;
-          document.querySelector("ol").appendChild(x);
+          x.innerHTML = `
+            <detail>
+              <summary>Product ${data.id}: ${data.title}</summary>
+            </detail>
+            <br>`;
+          container.appendChild(x);
       })
     })
   }
-});
+}
 
 // 2
 // loadPost.addEventListener("click", () => {

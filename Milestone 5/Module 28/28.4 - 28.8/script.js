@@ -16,9 +16,12 @@ let loadPost = document.getElementById("loadPost");
 loadPost.addEventListener("click", () => {
   let url = "https://jsonplaceholder.typicode.com/posts";
   fetch(url).then(response => response.json()).then(jsonData => {
-    let x = document.createElement("div");
-    x.innerHTML = `<br><code>${JSON.stringify(jsonData)}</code><br>`;
-    document.querySelector("body").appendChild(x);
-    console.log(jsonData);
+    jsonData.forEach((data) => {
+      //create HTML element
+      let x = document.createElement("div");
+      x.innerHTML = `<br><code>${data.title}</code><br>`;
+      document.querySelector("body").appendChild(x);
+      console.log(data);
+    }) 
   })
 });

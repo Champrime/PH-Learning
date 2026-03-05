@@ -1,3 +1,9 @@
+pre {
+    width: 120px;/*clamp(30vw, 0.33vw, 60vw);*/
+    height:  30px;/*clamp(30v, 0.33v, 60v);*/
+    overflow: auto;
+}
+
 button {
     display: flex;
     flex-direction: column;
