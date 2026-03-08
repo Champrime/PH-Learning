@@ -1,0 +1,13 @@
+* {
+    font-family: var(--font-mont);
+}
+
+:root {
+    --header-bg: rgba(186, 222, 255, 0.26);
+    --header-border: #C6BDBD;
+    --btn-font: #422AD5;
+}
+
+button {
+    
+}

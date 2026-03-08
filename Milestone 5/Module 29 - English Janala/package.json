@@ -1,0 +1,30 @@
+{
+  "name": "ph-english-janala-milestone-5-29",
+  "version": "1.0.0",
+  "description": "English Janala is a guided project that is developed to solidify the understanding of API Integration, Daisy UI of TailwindCSS, and everything of Vanilla JavaScript that's been taught so far. I'm adding some tweaks personally like installing Tailwind using CLI, servor npm package for live server,  to further solidify my understandings.",
+  "main": "index.html",
+  "scripts": {
+    "start": "servor --browse --reload",
+    "dev": "tailwindcss -i ./src/twInput.css -o ./src/twOutput.css --watch 2>&1 | while IFS= read -r line; do echo \"[$(date '+%I:%M:%S %p')] $line\"; done",
+    "build": "tailwindcss -i ./src/twInput.css -o ./src/twOutput.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"Daisy",
+    "UI\"",
+    "\"Tailwind",
+    "CSS\"",
+    "\"Vanilla",
+    "JavaScript\""
+  ],
+  "author": "Shakawat Hossain Sadik",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "servor": "^4.0.2",
+    "daisyui": "^5.5.19"
+  }
+}
