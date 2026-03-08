@@ -16,17 +16,42 @@
 </head>
 <body>
     <header>
-        <nav class="bg-(--header-bg) flex-between px-22 py-3 my-4">
-            <div class="flex-center-y">
-                <span>English</span><img src="./english-janala/assets/logo.png" alt=""><span>জানালা</span>
+        <nav class="navbar bg-(--header-bg) bg-base-100 flex-between px-3.5 md:px-12 lg:px-20 py-3 my-2 md:my-4 shadow-sm">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+              </div>
+              <ul
+                tabindex = "-1"
+                class = "menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow gap-4">
+                <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></a></li>
+                <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i><span>Learn</span></a></li>
+                <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log in</span></a></li>
+              </ul>
             </div>
-            <div class="flex-center-y gap-4">
-                <button class="flex-between"><i></i><span>FAQ</span></button>
-                <button class="flex-between"><i></i><span>Learn</span></button>
-                <button class="flex-between"><i></i><span>Log in</span></button>
-            </div>
+            <a class="btn btn-ghost text-xl"><span>English</span><img src="./english-janala/assets/logo.png" alt=""><span>জানালা</span></a>
+          </div>
+          <div class="navbar-end hidden md:flex">
+            <ul class="menu menu-horizontal px-1 flex-center-y gap-4">
+              <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></a></li>
+              <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i><span>Learn</span></a></li>
+              <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log in</span></a></li>
+            </ul>
+          </div>
         </nav>
     </header>
+    <main>
+      <section class="flex-between px-18 gap-64">
+        <div class = "content flex-1 my-auto">
+          <h2><span class="">English</span> is Easy!!</h2>
+          <p class="font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+        </div>
+        <div class="image flex-1">
+          <img src="./english-janala/assets/hero-student.png" alt="Happy student" class="">
+        </div>
+      </section>
+    </main>
 </body>
 <script src="./src/app.js"></script>
 </html>
