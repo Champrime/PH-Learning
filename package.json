@@ -7,5 +7,20 @@
     "quokka": "^0.0.7",
     "servor": "^4.0.2",
     "tailwindcss": "^4.2.1"
-  }
+  },
+  "name": "ph-learning",
+  "version": "1.0.0",
+  "description": "This repo contains my practice elements that I practicing while attending Programming Hero's Full Stack Web Development Course.",
+  "main": "script.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Champrime/PH-Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Champrime/PH-Learning/issues"
+  },
+  "homepage": "https://github.com/Champrime/PH-Learning#readme"
 }

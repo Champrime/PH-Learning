@@ -30,7 +30,7 @@
                 <li><a href="" class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log in</span></a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl"><span>English</span><img src="./english-janala/assets/logo.png" alt=""><span>জানালা</span></a>
+            <a class="flex-center-y text-xl"><span class="">English</span><img src="./english-janala/assets/logo.png" alt=""><span>জানালা</span></a>
           </div>
           <div class="navbar-end hidden md:flex">
             <ul class="menu menu-horizontal px-1 flex-center-y gap-4">
@@ -42,13 +42,37 @@
         </nav>
     </header>
     <main>
-      <section class="flex-between px-18 gap-64">
-        <div class = "content flex-1 my-auto">
-          <h2><span class="">English</span> is Easy!!</h2>
+      <section class="flex-col-reverse text-center md:text-left md:flex-row flex-between px-18 gap-64">
+        <div class = "content flex-1 my-auto flex-y gap-6">
+          <h2 class="text-4xl font-bold"><span class="text-(--highlight-word)">English</span> is Easy!!</h2>
           <p class="font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+          <div>
+            <div class="flex-y items-center md:items-start gap-4">
+              <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full max-w-xs text-xs px-3.5 py-2.5" />
+              <input type="password" placeholder="Enter Password" class="input input-bordered w-full max-w-xs text-xs px-3.5 py-2.5" />
+              <button class="btn btn-primary w-fit">Get Started</button>
+            </div>
+          </div>
         </div>
         <div class="image flex-1">
           <img src="./english-janala/assets/hero-student.png" alt="Happy student" class="">
+        </div>
+      </section>
+      <!-- section.flex-y.>(h2.text-2.5rem.font-bold)+(div>ul.flex.flex-wrap>li.flex-between.btn.btn-outline.btn-primary>i.fa-solid.fa-book-open)+div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3>div.flex-y.my-auto>(div.flex-center-y.mx-auto>h2+short+p.font-bangla)+(div.flex-between.px-10.5) -->
+      <section class="flex-center-col-y">
+        <h2 class="text-2.5rem font-bold"><span class="text-(--highlight-word)">Let's</span> learn Vocabularies</h2>
+        <div id="lesson" class="flex flex-wrap">
+          <button class="flex-between btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i><span></span></button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="flex-y my-auto">
+            <div class="flex-center-y mx-auto">
+              <h2></h2>
+              <short></short>
+              <p class="font-bangla"></p>
+            </div>
+            <div class="flex-between px-10.5"></div>
+          </div>
         </div>
       </section>
     </main>

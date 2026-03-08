@@ -6,6 +6,7 @@
     --header-bg: rgba(186, 222, 255, 0.26);
     --header-border: #C6BDBD;
     --btn-font: #422AD5;
+    --highlight-word: #00BCFF;
 }
 
 button {

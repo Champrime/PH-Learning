@@ -1,0 +1,65 @@
+:root {
+    --Dark-01: #1C1C1C;
+    --Dark-02: #333333;
+    --Dark-03: #777;
+    --Dark-05: #D2D2D2;
+    --Dark-07: #F4F4F4;
+    --Dark-08: #D9D9D9;
+    --btn-grad-01: #FF8938;
+    --btn-grad-02: #FF0000;
+    --orange-bg: #e6a6231a;
+    --lemon-bg: rgba(87, 118, 57, 0.1);
+    --shadow-01: 0 0.4375rem 3.125rem 0 rgba(0, 0, 0, 0.06);
+    --btn-2: linear-gradient(bottom right to top left, var(--btn-grad-02), var(--btn-grad-01));
+}
+
+html{font-size: clamp(0.875rem, 0.01vw, 1.25rem);}
+
+.btl{
+    border: 1px solid rgb(26, 255, 0);
+}
+.btr{
+    border: 1px solid rgb(255, 0, 0);
+}
+.btp{
+    border: 1px solid rgb(195, 0, 255);
+}
+
+.test-delay {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+.test-delay:hover {
+  font-size: 36px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  /* flex-direction: column; */
+  border-style: solid;
+  border-width: 5px;
+  width: fit-content;
+  height: 100px;
+  background-color: lime;
+  transition: all 400ms ease-out, all steps(20) 5s, all cubic-bezier(0.68, -0.55, 0.265, 1.55) 2s;
+    /* width 2s,
+    height 2s,
+    background-color 2s,
+    display 2s */
+}
+
+.box:hover {
+  /* display: flex;
+  align-items: center; */
+  border-style: dotted;
+  border-width: 5px;
+  background-color: #ccfc09;
+  width: fit-content;
+  height: 200px;
+}

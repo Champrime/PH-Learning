@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer components {
+
+    h1{
+        @apply text-[5rem] font-extrabold text-(--Dark-01) leading-[125%];
+    }
+
+    h2{
+        @apply text-[2.8125rem] font-extrabold text-(--Dark-01);
+    }
+
+    h3{
+        @apply font-extrabold text-3xl;
+    }
+
+    h4{
+        @apply font-extrabold text-[1.5625rem] text-(--Dark-01) text-center;
+    }
+
+    h5{
+        @apply text-xl font-extrabold text-(--Dark-01);
+    }
+
+    h6{
+        @apply text-xl font-bold;
+    }
+
+    p{
+        @apply text-(--Dark-03) font-medium;
+    }
+
+    .p2 {
+        @apply text-lg text-(--Dark-03) leading-[166.667%];
+    }
+
+    .p1 {
+        @apply text-(--Dark-03) font-semibold;
+    }
+
+    .p3_subheading {
+        @apply text-(--Dark-03) leading-[175%] text-center;
+    }
+
+    .p4 {
+        @apply text-(--Dark-07) leading-[175%];
+    }
+
+    .p5 {
+        @apply text-(--Dark-03) font-normal leading-[175%];
+    }
+
+    a{
+        @apply text-(--Dark-01) font-bold cursor-not-allowed;
+    }
+
+    .btn-primary{
+        @apply bg-linear-270 from-(--btn-grad-01) to-(--btn-grad-02) text-white font-bold py-4.5 px-5 rounded-[0.625rem] flex items-center gap-2.5;
+    }
+
+    .btn-primary:hover{
+        @apply bg-linear-270 from-(--btn-grad-02) to-(--btn-grad-01) transition-all duration-300 ease-in-out;
+    }
+
+    .btn-secondary{
+        @apply px-7 py-3.5 bg-(--Dark-07) rounded-[0.625rem];
+    }
+
+    .btn-secondary-words{
+        @apply bg-linear-270 font-bold text-xl from-(--btn-grad-02) to-(--btn-grad-01) bg-clip-text text-transparent ;
+    }
+
+    .flex-center-col-x{
+        @apply flex flex-col justify-center;
+    }
+
+    .flex-center-col-y{
+        @apply flex flex-col items-center;
+    }
+
+    .flex-center-col{
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .flex-center-row-x{
+        @apply flex flex-row justify-center;
+    }
+
+    .flex-center-row-y{
+        @apply flex flex-row items-center;
+    }
+
+    .flex-center-row{
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .flex-center-x{
+        @apply flex justify-center;
+    }
+
+    .flex-center-y{
+        @apply flex items-center;
+    }
+
+    .flex-center-all{
+        @apply flex justify-center items-center;
+    }
+}
