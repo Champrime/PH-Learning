@@ -1,10 +1,16 @@
 let loadLesson = () => {
     fetch("https://openapi.programming-hero.com/api/words/all")
     .then(res => res.json())
-    .then(dat => {console.log(dat); displayLesson(dat.data);})
+    .then(dat => {console.log(dat); displayLesson(dat); /*displayLessons(dat.data);*/})
 }
 
-let displayLesson = (api) => {
+let displayLesson = (lessons) => {
+    /*// 1. get the container & empty it
+    
+    */
+}
+
+let displayLessons = (api) => {
     // 1. get the container & empty it
     const lessons = document.getElementById("lesson");
     lessons.innerHTML = "";
